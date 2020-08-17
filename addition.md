@@ -1,3 +1,5 @@
+# Addition
+
 ## Scenario: Addition of two positive number
 
   Given the calculator is turned on
