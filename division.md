@@ -2,119 +2,105 @@
 
 ## Scenarios
 
-## Scenario:Division by Zero
+### Scenario: Recurring decimal case
 
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-  and enter zero,
-   and press "equals".
-- Then: Display "Can not divide by zero" as the result.
+  Given The calculator is ON able to enter operator and number
+  When I type in "number"
+  And I press "divide"
+  And I type in "number"
+  And I press "equals"
+  Then I see the "at most ten precision" as the result
 
-## Scenario: Divide 0 by any number
+### Scenario: n number of times "/" pressed
 
-- Given: On the calculator
-- When: Enter zero,
-  and then enter "division" operator,
-  and enter second "number",
-   and press "equals".
-- Then: Display Zero as the result.
+  Given The calculator is ON able to enter number
+  When I type in "number"
+  And I press "divide"
+  And I Press "divide"
+  And I type in "number"
+  And I press "equals"
+  Then I see "divided number" as the result if immediate operator is not plus / minus
+  if the immediate  operator is puls or minus
+  And I will check Immediate previous operator is minus
+  Then i will wait for operand
 
-## Scenario: One number is negative
+### Scenario: When operand 2 is not present
 
-- Given: On the calculator
-- When: Enter first "positive number",
-  and then enter "division" operator,
-  and enter second "negative point",
-   and press "equals".
-- Then: Display "Divided number" with negative sign as the result.
+  Given The calculator is ON able to enter big number
+  When I type in "number"
+  And I press "divide"
+  And I press "equals"
+  Then I don't see the result wait for operand
 
-## Scenario: Both number are negative
+### Scenario: Division by any/all operands being fractions
 
-- Given: On the calculator
-- When: Enter first "negative number",
-  and then enter "division" operator,
-  and enter second "negative point",
-   and press "equals".
-- Then: Display "Divided number" with positive sign as the result.
+  Given The calculator is ON able to enter number
+  When I type in "number"
+  And I press "divide"
+  And I type in "fraction number"
+  Then I see "Left to right division" as result
 
-## Scenario: Both number are zero
+### Scenario: Division of more than 2 numbers
 
-- Given: On the calculator
-- When: Enter zero,
-  and then enter "division" operator,
-  and enter zero,
-   and press "equals".
-- Then: Display "undefined" as the result.
+  Given The calculator is ON able to enter number
+  When I type in "number"
+  And I press "divide"
+  And I type in "number"
+  And I press "divide"
+  And I type in "number"
+  And I press "equals"
+  Then I see the "left to right division" as the result
 
-## Scenario: Recurring decimal case
+### Scenario: Division by zero when operand one is any number
 
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-  and enter second "number",
-   and press "equals".
-- Then: Display "divided number" with n precision as the result.
+Given The calculator is ON
+When I type in "number"
+And I press "divide"
+And I type in "zero"
+And I press "equals"
+Then I see the "cannot divide number by zero" as the result
 
-## Scenario: Pressing division operator more than one
+### Scenario: Divide zero by any number
+  
+  Given The calculator is ON
+  When I type in "zero"
+  And I press "divide"
+  And I type in "number"
+  And I press "equals"
+  Then I see "zero" as the result
 
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-  and then enter "division" operator,
-  and enter second "number",
-   and press "equals".
-- Then: Use one division operator and display "divided number" as the result.
+### Scenario: Any one operand is negative
 
-## Scenario: Interleaving operators
+  Given The calculator is ON able to enter fraction
+  When I type in "operand one" positive
+  And I press "divide"
+  And I type in "operand two" negative
+  And I press "equals"
+  Then I see the "negative number" as the result
 
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-  and then some irrelevant operator.
-  and enter second "number",
-   and press "equals".
-- Then: Prefer the last operator.
-       Display result accordingly.
+### Scenario: Both the operand is negative
 
-## Scenario: Operand two is not present
+  Given The calculator is ON able to enter fraction
+  When I type in "operand one" negative
+  And I press "divide"
+  And I type in "operand two" negative
+  And I press "equals"
+  Then I see the "negative number" as the result
 
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-   and press "equals".
-- Then: Maintain the last state and waits for the second operand.
+### Scenario: Division isn't symmetric
+  
+  Given The calculator is ON able to enter number
+  When I type in "number"
+  And I press "divide"
+  And I type in "number"
+  And I press "equals"
+  Then I see the "number" as the result
 
-## Scenario: division with more than two numbers
-
-- Given: On the calculator
-- When: Enter first "number",
-  and enter "division" operator,
-  and then enter second "number",
-   and press "equals".
-- Then: Display "divided number" as the intermediate result.
-- When: Again press "division" operator,
-         then enter third "number",
-         then press "equal".
-- Then: Use intermediate result as first number and add third
-        number with this as second number and
-        display the final "divided number" as result.
-
-## Scenario: Division by any/all operands being fractions
-
-- Given: On the calculator
-- When: Enter first "umber",
-  and then enter "division" operator,
-  and enter second "factional number",
-   and press "equals".
-- Then: Perform the same operation as last case.
-        division with more than two numbers.
-
-## Scenario: Simple division
-
-- Given: On the calculator
-- When: Enter first "number",
-  and then enter "division" operator,
-  and enter second "number",
-   and press "equals".
-- Then: Display "Divided number" as the result.
+### Scenario: Division when both operands are 0
+  
+  Given The calculator is ON able to enter decimal number
+  When I type in "zero"
+  And I press "divide"
+  And I type in "zero"
+  And I press "equals"
+  Then I see the "undefined" as the result
