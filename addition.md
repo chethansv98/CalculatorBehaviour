@@ -1,6 +1,6 @@
 # Addition
 
-### Scenario: Addition of two negative numbers
+## Scenario: Addition of two negative numbers
 Given The calculator is ON
 
 When I enter  "positive number"
@@ -10,7 +10,7 @@ And I press "equals"
 
 Then I see the "added number" as the result
 
-### Scenario: Addition of two negative numbers
+## Scenario: Addition of two negative numbers
 
   Given The calculator is ON
   When I type in "positive number"
@@ -19,7 +19,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Addition of fractions
+## Scenario: Addition of fractions
 
   Given The calculator is ON able to enter fraction
   When I type in "positive fraction number"
@@ -28,7 +28,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Addition of positive and negative number
+## Scenario: Addition of positive and negative number
 
   Given The calculator is ON able to enter number
   When I type in "positive number"
@@ -37,7 +37,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Addition of decimals
+## Scenario: Addition of decimals
 
   Given The calculator is ON able to enter decimal number
   When I type in "positive decimal number"
@@ -46,7 +46,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Typing operator more than once
+## Scenario: Typing operator more than once
 
   Given The calculator is ON able to enter operator and number
   When I type in "number"
@@ -56,7 +56,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result as it will prefer the first operator
 
-### Scenario: Addition of more than two numbers
+## Scenario: Addition of more than two numbers
 
   Given The calculator is ON able to enter number
   When I type in "number"
@@ -67,7 +67,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Adding numbers where the result goes out of range
+## Scenario: Adding numbers where the result goes out of range
 
   Given The calculator is ON able to enter big number
   When I type in "number"
@@ -76,7 +76,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the result within the range
 
-### Scenario: 6+* provided as input
+## Scenario: 6+* provided as input
 
   Given The calculator is ON able to enter number
   When I type in "number"
@@ -85,7 +85,7 @@ Then I see the "added number" as the result
   And I press "multiply"
   Then I will wait for next operand
 
-### Scenario: Identify operation
+## Scenario: Identify operation
 
   Given The calculator is ON able to enter number
   When I type in "Identity"
@@ -94,7 +94,7 @@ Then I see the "added number" as the result
   And I press "equals"
   Then I see the "added number" as the result
 
-### Scenario: Converse operation
+## Scenario: Converse operation
 
   Given: the calculator is ON
   And I enter in "number"
