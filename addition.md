@@ -2,7 +2,6 @@
 
 ## Scenario: Addition of two positive number
 
-  Given the calculator is turned on
   Given that I turn on the calculator
 
   When I type in "positive number"
