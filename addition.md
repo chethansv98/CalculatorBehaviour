@@ -1,12 +1,12 @@
-# Addition Scenarios
-## Scenario: Addition of two positive numbers
-Given The calculator is ON
+# Addition 
 
+## Scenario: Addition of two positive numbers
+
+Given The calculator is ON
 When I enter  "positive number"
 And I press "plus"
 And I type in "positive number"
 And I press "equals"
-
 Then I see the "added number" as the result
 
 ## Scenario: Addition of two negative numbers
