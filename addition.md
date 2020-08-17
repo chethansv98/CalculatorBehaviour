@@ -1,6 +1,5 @@
-# Addition
-
-## Scenario: Addition of two negative numbers
+# Addition Scenarios
+## Scenario: Addition of two positive numbers
 Given The calculator is ON
 
 When I enter  "positive number"
