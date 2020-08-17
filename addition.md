@@ -1,6 +1,6 @@
 # Addition
 
-Scenario: Addition of two positive number
+# Scenario: Addition of two positive number
   
 Given that I turn on the calculator 
 
@@ -8,7 +8,7 @@ When I type in "positive number" And I press "plus" And I type in "positive numb
 
 Then I see the "added number" as the result
 
-Scenario: Addition of two negative number
+# Scenario: Addition of two negative number
 
 Given that I turn on the calculator
 
@@ -16,7 +16,7 @@ When I type in "negative number" And I press "plus" And I type in "negative numb
 
 Then I see the "added number" as the result
 
-Scenario: Addition of two fraction number
+# Scenario: Addition of two fraction number
 
 Given that I turn on the calculator
 
@@ -24,7 +24,7 @@ When I type in "fraction number" And I press "plus" And I type in "fraction numb
 
 Then I see the "added number in fraction" as the result
 
-Scenario: Addition of positive and negative number
+# Scenario: Addition of positive and negative number
 
 Given that I turn on the calculator
 
@@ -32,7 +32,7 @@ When I type in "positive number" And I press "plus" And I type in "negative numb
 
 Then I see the "added number" as the result
 
-Scenario: Typing operators more than once
+# Scenario: Typing operators more than once
 
 Given that I turn on the calculator
 
